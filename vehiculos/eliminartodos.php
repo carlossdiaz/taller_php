@@ -2,7 +2,7 @@
     require 'modelo/modelo.php';
     session_start();
     $vehiculos = $_SESSION['vehiculos'];
-    foreach($vehiculos as $vehiculo){
-        unset($vehiculos[$vehiculo->get_matricula()]);
-    }
+    unset($vehiculos);
+    $vehiculos = array();
+    $_SESSION['vehiculos'] = $vehiculos;
 ?>
